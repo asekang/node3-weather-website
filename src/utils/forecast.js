@@ -11,7 +11,7 @@ const foreacst = (latitude, longitude, callback) =>{
             callback('Unable to find location. Try another search', undefined)
         } else {
             callback(undefined, {weather: 'It is currently ' + body.current.weather_descriptions[0] + 
-            'It is ' + body.current.temperature + '. Humidity is ' + body.current.humidity + '%'})
+            '. It is ' + body.current.temperature + 'degrees' + '. Humidity is ' + body.current.humidity + '%'})
         }
     })
 }
