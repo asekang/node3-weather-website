@@ -10,9 +10,8 @@ const foreacst = (latitude, longitude, callback) =>{
         } else if(body.error){
             callback('Unable to find location. Try another search', undefined)
         } else {
-            callback(undefined, {
-                weather: body.current.weather_descriptions[0]                
-            })
+            callback(undefined, {weather: 'It is currently ' + body.current.weather_descriptions[0] + 
+            'It is ' + body.current.temperature + '. Humidity is ' + body.current.humidity + '%'})
         }
     })
 }
